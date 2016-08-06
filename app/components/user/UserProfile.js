@@ -13,7 +13,7 @@ class UserProfile extends React.Component {
     render() {
 
         let user = this.props.user;
-        let username = this.props.params.username;
+        let username = this.props.username;
 
         /*if (user && user.username != username) {
             this.fetchUser(username);

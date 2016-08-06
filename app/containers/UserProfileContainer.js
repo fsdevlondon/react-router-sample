@@ -12,7 +12,7 @@ class UserProfileContainer extends React.Component {
 
   constructor () {
     super();
-    this.state = { username : null };
+    this.state = { user : null };
     this.fetchUser = this.fetchUser.bind(this)
   }
 
@@ -33,7 +33,12 @@ class UserProfileContainer extends React.Component {
   }
 
   render() {
-    <UserProfile user={this.state.user}/>
+    return (
+      <UserProfile
+        user={this.state.user}
+        username={this.props.params.username}
+      />
+    )
   }
 
 }
