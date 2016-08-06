@@ -8,32 +8,17 @@ class UserProfile extends React.Component {
 
     constructor() {
         super();
-        this.state = { username : null };
-    }
-
-    componentDidMount() {
-        this.fetchUser(this.props.username);
-    }
-
-    fetchUser(username) {
-        fetch(`/data/users/${username}.json`, {
-            method: 'get'
-        }).then((response) => {
-            return response.json()
-        }).then((data) => {
-            this.setState({user : data});
-        }).catch((err)=> {
-            console.log(err);
-        });
     }
 
     render() {
-        
-        let user = this.state.user;
-        let username = this.props.username;
-        if (user && user.username != username) {
+
+        let user = this.props.user;
+        let username = this.props.params.username;
+
+        /*if (user && user.username != username) {
             this.fetchUser(username);
-        }
+        }*/
+
         let fullname = '';
         let email = '';
         let gender = '';

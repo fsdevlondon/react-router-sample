@@ -3,7 +3,7 @@ import Main from "../components/Main";
 import Home from "../components/Home";
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import UserProfile from "../components/user/UserProfile";
-import UserListContainer from "../components/user/UserListContainer";
+import UserListContainer from "../containers/UserListContainer";
 import WorkshopList from "../components/workshop/WorkshopList";
 
 const Routes = (

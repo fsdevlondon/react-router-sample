@@ -3,7 +3,6 @@ import React from "react";
 import {List, ListItem} from 'material-ui/List';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 import Divider from 'material-ui/Divider';
-import UserProfile from "./UserProfile"
 import Avatar from 'material-ui/Avatar';
 import {pinkA200, transparent} from 'material-ui/styles/colors';
 import withWidth, { LARGE} from '../../utils/WithWidth';
@@ -26,13 +25,10 @@ class UserList extends React.Component {
             />
         ));
 
-        const listView = <List className="view"> {listItems} </List>
-        const childrenView = (
-            <div className="view">
-                <UserProfile username={this.props.username} />
-            </div>
-        )
 
+
+        const listView = <List className="view"> {listItems} </List>
+        const childrenView = <div className="view"> {this.props.children} </div>
 
         let masterView, detailView;
 
